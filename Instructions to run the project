@@ -1,3 +1,8 @@
+Prerequisite -Install MS- SQL Server 2014/2017 developer edition
+              Install Visual Studio 2017/2019 community edition
+              SQL Server Management Studio
+              
+              
 Step 1 - Clone the project from repository to your local computer.
 Step 2 - Run DB Script (SQL Query File in Microsoft SQL Server Management Studio). Create database (using first query) and then change database to execute other queries (In the UI search for master and select your databse name from the down arrow near master)
 Step 3 - Open the project in Microsoft Visual Studio (ShopBridge1.sln). 
