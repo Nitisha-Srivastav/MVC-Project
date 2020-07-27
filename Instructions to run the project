@@ -1,0 +1,16 @@
+Step 1 - Clone the project from repository to your local computer.
+Step 2 - Run DB Script (SQL Query File in Microsoft SQL Server Management Studio). Create database (using first query) and then change database to execute other queries (In the UI search for master and select your databse name from the down arrow near master)
+Step 3 - Open the project in Microsoft Visual Studio (ShopBridge1.sln). 
+Step 4 - In the ProductDataAccess project connect it with your db. Delete the already created edmx file and create your own edmx file.
+        Steps to add EDMX file-
+        Add class -> ado.net -> efdesigner from db -> next -> new connection -> give server name “.” or (server name of your db) -> Select db -> click on ok  
+Step 5 - Add connection string from app config in ProductDataAccess to web config in mvc after <appSettings> tag
+Step 6 - Add reference from ProductDataAccess to WebApplicationMVC project if not added.
+Step 7 - Check models folder in WebApplicationMVC project it should have all the scalar properties of the columns in database and one mode scalar property for ImageFile.
+Step 8 - Add Nuget package (Entity Framework) 
+      Install package 
+      Tools -> manage nuget package -> PM CONSOLE -> choose mvc project -> type (Install-Package microsoft.aspnet.webapi.client)
+Step 9 - Build the solution.
+Step 10 - Open ListAllProduct View from the view folder in the WebApplicationMVC and run or open Route Config file in app start folder and set the name of controller (ProductMVC) and Action (ListAllProduct) .Save and run.
+## Do not change name of any file in the project all are interlinked.
+
