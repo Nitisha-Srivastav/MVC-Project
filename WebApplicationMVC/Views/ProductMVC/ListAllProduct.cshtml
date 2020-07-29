@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplicationMVC.Models.Product>
+
+<p>
+    @Html.ActionLink("Add Product", "AddNewProduct")
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+                @Html.DisplayNameFor(model => model.ProductImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+
+        @if (item.ProductImg != null)
+        {
+            <img src="@Url.Content(item.ProductImg)" width="50" height="50" />
+        }
+        </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProductName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProductDescription)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProductPrice)
+    </td>
+    <td>
+        @*@Html.ActionLink("Edit", "Edit", new { pid = item.Id }) |*@
+        @Html.ActionLink("Details", "ShowProductDetails", new { pid = item.Id }) |
+        @Html.ActionLink("Delete", "DeleteProduct", new { pid = item.Id })
+    </td>
+</tr>
+}
+
+</table>

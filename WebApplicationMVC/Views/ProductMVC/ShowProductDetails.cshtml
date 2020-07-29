@@ -1,0 +1,57 @@
+﻿@model WebApplicationMVC.Models.Product
+
+@{
+    ViewBag.Title = "ShowProductDetails";
+}
+
+<h2>PRODUCT DETAILS</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductDescription)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+
+        <dt>
+            @if (Model.ProductImg != null)
+            {
+            @Html.DisplayNameFor(model => model.ProductImg)
+            }
+        </dt>
+
+        <dd>
+            @if (Model.ProductImg != null)
+            {
+            <img src="@Url.Content(Model.ProductImg)" width="100" height="100" />
+            }
+            </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { pid = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "ListAllProduct")
+</p>
