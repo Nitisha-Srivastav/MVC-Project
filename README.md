@@ -1,6 +1,5 @@
 # .Net-Project (ShopBridge)
 
-### Question
 #### Need to build a website that helps track the different items ShopBridge have for sale.This will require both frontend and backend solution.
 
 A page is created for adding the product to the inventory - (Take information about the project like name,description,price and image)
